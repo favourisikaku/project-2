@@ -2434,6 +2434,9 @@ table {
     top: 30% !important;
     left: 53% !important;
   }
+  .navbar-bottom {
+    display: block !important;
+  }
 }
 
 @media screen and (max-width: 768px) {

@@ -5,6 +5,7 @@ import { AppContext } from "../Context/AppContext";
 import { Chart } from "chart.js/auto";
 import { ClipLoader } from "react-spinners";
 import SidebarInc from "../Bars/SidebarInc";
+import NavBottom from "../Bars/NavBottom";
 
 const Dashboard = () => {
   const { toggleSideBar, SideBarVisibility } = useContext(AppContext);
@@ -752,6 +753,8 @@ const Dashboard = () => {
               </div>
             </div>
           </main>
+
+          <NavBottom />
         </div>
       </div>
     </div>
