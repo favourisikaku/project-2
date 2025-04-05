@@ -565,8 +565,8 @@ h6 {
 .nav-underline .nav-link.active,
 .nav-underline .show > .nav-link {
   font-weight: 400;
-  color: var(--primary);
-  border-bottom: 4px solid var(--primary);
+  color: var(--text-color-1);
+  border-bottom: 2px solid var(--text-color-1);
 }
 
 .marketplace-state.nav-underline .nav-link.active,
@@ -2414,10 +2414,74 @@ table {
   font-size: 2rem;
 }
 
+@media screen and (max-width: 992px) {
+  .circle-container-1 {
+    top: 30% !important;
+    left: 60% !important;
+  }
+
+  .circle-container-2 {
+    top: 28% !important;
+    left: 15% !important;
+  }
+
+  .circle-container-3 {
+    top: 25% !important;
+    left: 23% !important;
+  }
+
+  .circle-container-4 {
+    top: 30% !important;
+    left: 53% !important;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .hero-heading {
     font-size: 2.5rem;
     font-weight: 700;
+  }
+  .nav-underline-mobile {
+    display: flex !important;
+    padding-left: 30px;
+  }
+
+  .nav-underline-web {
+    display: none !important;
+  }
+
+  .insights-body {
+    display: flex;
+  }
+  .navbar-circle-mobile-text {
+    display: none !important;
+  }
+  .navbar-circle-mobile-body {
+    display: none;
+  }
+
+  .circle-container-1 {
+    top: 30% !important;
+    left: 60% !important;
+  }
+
+  .circle-container-2 {
+    top: 28% !important;
+    left: 15% !important;
+  }
+
+  .circle-container-3 {
+    top: 25% !important;
+    left: 23% !important;
+  }
+
+  .circle-container-4 {
+    top: 30% !important;
+    left: 53% !important;
+  }
+
+  .dashboard-more {
+    display: none !important;
   }
 
   .vertx-logo-mobile {

@@ -117,7 +117,7 @@ const Dashboard = () => {
                 <div className="col-lg-12">
                   <div className="mb-3 d-flex justify-content-between align-items-center">
                     <ul
-                      className="nav custom-pills nav-pills mb-0"
+                      className="nav custom-pills nav-pills mb-0 nav-underline-web"
                       id="pills-tab"
                       role="tablist"
                     >
@@ -144,6 +144,56 @@ const Dashboard = () => {
                           type="button"
                           role="tab"
                           aria-controls="pills-password"
+                          aria-selected="false"
+                        >
+                          Demographics
+                        </button>
+                      </li>
+                    </ul>
+
+                    <ul
+                      className="nav nav-underline  text-medium  mb-3 gap-30 nav-underline-mobile"
+                      id="pills-tab"
+                      role="tablist"
+                      style={{ display: "none" }}
+                    >
+                      <li className="nav-item" role="presentation">
+                        <button
+                          className="nav-link active"
+                          id="pills-profile-tab"
+                          data-bs-toggle="pill"
+                          data-bs-target="#pills-profile"
+                          type="button"
+                          role="tab"
+                          aria-controls="pills-profile"
+                          aria-selected="true"
+                        >
+                          Overview
+                        </button>
+                      </li>
+                      <li className="nav-item" role="presentation">
+                        <button
+                          className="nav-link"
+                          id="pills-bundle-tab"
+                          data-bs-toggle="pill"
+                          data-bs-target="#pills-bundle"
+                          type="button"
+                          role="tab"
+                          aria-controls="pills-bundle"
+                          aria-selected="false"
+                        >
+                          Reports
+                        </button>
+                      </li>
+                      <li className="nav-item" role="presentation">
+                        <button
+                          className="nav-link"
+                          id="pills-inactive-tab"
+                          data-bs-toggle="pill"
+                          data-bs-target="#pills-inactive"
+                          type="button"
+                          role="tab"
+                          aria-controls="pills-inactive"
                           aria-selected="false"
                         >
                           Demographics
@@ -214,7 +264,36 @@ const Dashboard = () => {
                                     </div>
                                   </div>
                                 </div>
-
+                                <div className="d-flex">
+                                  <div>
+                                    <h1
+                                      className="mb-0"
+                                      style={{
+                                        fontWeight: "bold",
+                                        fontSize: "35px",
+                                      }}
+                                    >
+                                      13.49k
+                                    </h1>
+                                  </div>
+                                  <div
+                                    className="d-flex ms-4"
+                                    style={{ flexDirection: "column" }}
+                                  >
+                                    <span style={{ color: "#01754F" }}>
+                                      +459%
+                                    </span>
+                                    <span
+                                      style={{
+                                        color: "#555555",
+                                        lineHeight: "15px",
+                                      }}
+                                      className="ms-2"
+                                    >
+                                      (897)
+                                    </span>
+                                  </div>
+                                </div>
                                 <div className="mt-3">
                                   <div className="chart-height mb-4">
                                     <canvas
@@ -230,49 +309,70 @@ const Dashboard = () => {
                           <div className="col-lg-5 mb-4">
                             <div className="card h-100 border-dark">
                               <div className="card-body">
-                                <div className="d-flex justify-content-between align-items-center border-0 flex-nowrap overflow-auto py-3 pb-4 ">
+                                <div className="d-flex justify-content-between align-items-center border-0 flex-nowrap overflow-auto py-3 pb-4  ">
                                   <div className="me-lg-0 me-4">
                                     <div className="mb-4">
-                                      <h4 className="text-medium  mb-0 me-2">
+                                      <h2
+                                        className="text-medium  mb-0 me-2"
+                                        style={{ fontSize: "24px" }}
+                                      >
                                         Insights
-                                      </h4>
+                                      </h2>
                                     </div>
-                                    <div className="mb-4">
-                                      <h5 className="mb-1">Founders</h5>{" "}
-                                      <div className="d-flex justify-content-between align-items-center">
-                                        <div className="me-4">
-                                          <h1 className="mb-0">7.4k</h1>
-                                        </div>
-                                        <div
-                                          className="d-flex"
-                                          style={{ flexDirection: "column" }}
-                                        >
-                                          <span style={{ color: "#01754F" }}>
-                                            +000%
-                                          </span>
-                                          <span style={{ color: "#555555" }}>
-                                            (000)
-                                          </span>
+                                    <div className="insights-body">
+                                      <div className="mb-4">
+                                        <h5 className="mb-1">Founders</h5>{" "}
+                                        <div className="d-flex justify-content-between align-items-center">
+                                          <div className="me-4">
+                                            <h1
+                                              className="mb-0"
+                                              style={{
+                                                fontWeight: "bold",
+                                                fontSize: "35px",
+                                              }}
+                                            >
+                                              7.4k
+                                            </h1>
+                                          </div>
+                                          <div
+                                            className="d-flex"
+                                            style={{ flexDirection: "column" }}
+                                          >
+                                            <span style={{ color: "#01754F" }}>
+                                              +000%
+                                            </span>
+                                            <span style={{ color: "#555555" }}>
+                                              (000)
+                                            </span>
+                                          </div>
                                         </div>
                                       </div>
-                                    </div>
 
-                                    <div>
-                                      <h5 className="mb-1">Investors</h5>{" "}
-                                      <div className="d-flex justify-content-between align-items-center">
-                                        <div className="me-4">
-                                          <h1 className="mb-0">6.09k</h1>
-                                        </div>
-                                        <div
-                                          className="d-flex"
-                                          style={{ flexDirection: "column" }}
-                                        >
-                                          <span style={{ color: "#01754F" }}>
-                                            +000%
-                                          </span>
-                                          <span style={{ color: "#555555" }}>
-                                            (000)
-                                          </span>
+                                      <div>
+                                        <h5 className="mb-1">Investors</h5>{" "}
+                                        <div className="d-flex justify-content-between align-items-center">
+                                          <div className="me-4">
+                                            <h1
+                                              className="mb-0"
+                                              style={{
+                                                fontWeight: "bold",
+                                                fontSize: "35px",
+                                              }}
+                                            >
+                                              6.09k
+                                            </h1>
+                                          </div>
+                                          <div
+                                            className="d-flex"
+                                            style={{ flexDirection: "column" }}
+                                          >
+                                            <span style={{ color: "#01754F" }}>
+                                              +000%
+                                            </span>
+                                            <span style={{ color: "#555555" }}>
+                                              (000)
+                                            </span>
+                                          </div>
                                         </div>
                                       </div>
                                     </div>
@@ -318,7 +418,7 @@ const Dashboard = () => {
                                     <div className="d-flex mt-5">
                                       <div>
                                         <span
-                                          className="img-fluid h-icon-50  ms-3 rounded-circle navbar-circle-mobile"
+                                          className="img-fluid h-icon-50  ms-3 rounded-circle navbar-circle-mobile-body"
                                           style={{
                                             backgroundColor: "#4834D4",
                                             minWidth: "30px",
@@ -329,13 +429,13 @@ const Dashboard = () => {
                                         ></span>
                                         <span
                                           style={{ fontSize: "14px" }}
-                                          className="ms-1"
+                                          className="ms-1 navbar-circle-mobile-text"
                                         >
                                           India
                                         </span>
 
                                         <div
-                                          className="circle-container"
+                                          className="circle-container circle-container-1"
                                           style={{ top: "50%", left: "40%" }}
                                         >
                                           <span
@@ -353,7 +453,7 @@ const Dashboard = () => {
 
                                       <div className="ms-3">
                                         <span
-                                          className="img-fluid h-icon-50  ms-3 rounded-circle navbar-circle-mobile"
+                                          className="img-fluid h-icon-50  ms-3 rounded-circle navbar-circle-mobile-body"
                                           style={{
                                             backgroundColor: "#BD5302",
                                             minWidth: "30px",
@@ -364,13 +464,13 @@ const Dashboard = () => {
                                         ></span>
                                         <span
                                           style={{ fontSize: "14px" }}
-                                          className="ms-1"
+                                          className="ms-1 navbar-circle-mobile-text"
                                         >
                                           USA
                                         </span>
 
                                         <div
-                                          className="circle-container"
+                                          className="circle-container circle-container-2"
                                           style={{ top: "52%", left: "13%" }}
                                         >
                                           <span
@@ -387,7 +487,7 @@ const Dashboard = () => {
                                       </div>
                                       <div className="ms-3">
                                         <span
-                                          className="img-fluid h-icon-50  ms-3 rounded-circle navbar-circle-mobile"
+                                          className="img-fluid h-icon-50  ms-3 rounded-circle navbar-circle-mobile-body"
                                           style={{
                                             backgroundColor: "#E9C16B",
                                             minWidth: "30px",
@@ -398,13 +498,13 @@ const Dashboard = () => {
                                         ></span>
                                         <span
                                           style={{ fontSize: "14px" }}
-                                          className="ms-1"
+                                          className="ms-1 navbar-circle-mobile-text"
                                         >
                                           CANADA
                                         </span>
 
                                         <div
-                                          className="circle-container"
+                                          className="circle-container circle-container-3"
                                           style={{ top: "45%", left: "18%" }}
                                         >
                                           <span
@@ -421,7 +521,7 @@ const Dashboard = () => {
                                       </div>
                                       <div className="ms-3">
                                         <span
-                                          className="img-fluid h-icon-50  ms-3 rounded-circle navbar-circle-mobile"
+                                          className="img-fluid h-icon-50  ms-3 rounded-circle navbar-circle-mobile-body"
                                           style={{
                                             backgroundColor: "#01754F",
                                             minWidth: "30px",
@@ -432,13 +532,13 @@ const Dashboard = () => {
                                         ></span>
                                         <span
                                           style={{ fontSize: "14px" }}
-                                          className="ms-1"
+                                          className="ms-1 navbar-circle-mobile-text"
                                         >
                                           UAE
                                         </span>
 
                                         <div
-                                          className="circle-container"
+                                          className="circle-container circle-container-4"
                                           style={{ top: "50%", left: "35%" }}
                                         >
                                           <span
