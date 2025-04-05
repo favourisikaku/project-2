@@ -8,7 +8,6 @@ import SidebarInc from "../Bars/SidebarInc";
 import NavBottom from "../Bars/NavBottom";
 
 const Dashboard = () => {
-  const { toggleSideBar, SideBarVisibility } = useContext(AppContext);
   const chartRef = useRef(null);
 
   const [dataFetched, setDataFetched] = useState(false);
@@ -109,9 +108,9 @@ const Dashboard = () => {
   return (
     <div className="main-admin-container">
       <div className="d-flex flex-column flex-lg-row ">
-        {toggleSideBar && <SidebarInc />}
+        <SidebarInc />
         <div className="flex-lg-fill overflow-auto vstack vh-lg-100 position-relative">
-          {<DashboardNavInc SideBarVisibility={SideBarVisibility} />}
+          <DashboardNavInc />
           <main className="admin-content ">
             <div className="container mt-4">
               <div className="row">
