@@ -9,7 +9,7 @@ import SidebarInc from "../Bars/SidebarInc";
 const Dashboard = () => {
   const { toggleSideBar, SideBarVisibility } = useContext(AppContext);
   const chartRef = useRef(null);
-  const chartRef2 = useRef(null);
+
   const [dataFetched, setDataFetched] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -93,50 +93,10 @@ const Dashboard = () => {
         },
       });
 
-      const ctx = document.getElementById("halfDonutChart").getContext("2d");
-
-      const data = {
-        labels: ["Red", "Blue", "Green"],
-        datasets: [
-          {
-            data: [70, 30],
-            backgroundColor: ["#FE0000", "#F4F6F7"],
-            hoverBackgroundColor: ["#FE0000", "#F4F6F7"],
-            borderRadius: 50, // Rounds the edges of the segments
-            cutout: "80%",
-          },
-        ],
-      };
-
-      const options = {
-        rotation: -90, // Start angle (top of the chart)
-        circumference: 180, // Half-circle (180 degrees)
-        plugins: {
-          responsive: true,
-          maintainAspectRatio: false,
-          legend: {
-            display: false,
-            position: "bottom",
-          },
-        },
-      };
-
-      const halfDonutChart = new Chart(ctx, {
-        type: "doughnut",
-        data: data,
-        options: options,
-      });
-
       // Cleanup function to destroy chart on component unmount
       return () => {
         if (chartRef.current) {
           const chartInstance = Chart.getChart(chartRef.current);
-          if (chartInstance) {
-            chartInstance.destroy();
-          }
-        }
-        if (chartRef2.current) {
-          const chartInstance = Chart.getChart(chartRef2.current);
           if (chartInstance) {
             chartInstance.destroy();
           }
@@ -287,8 +247,12 @@ const Dashboard = () => {
                                           className="d-flex"
                                           style={{ flexDirection: "column" }}
                                         >
-                                          <span>+000%</span>
-                                          <span>(000)</span>
+                                          <span style={{ color: "#01754F" }}>
+                                            +000%
+                                          </span>
+                                          <span style={{ color: "#555555" }}>
+                                            (000)
+                                          </span>
                                         </div>
                                       </div>
                                     </div>
@@ -303,19 +267,22 @@ const Dashboard = () => {
                                           className="d-flex"
                                           style={{ flexDirection: "column" }}
                                         >
-                                          <span>+000%</span>
-                                          <span>(000)</span>
+                                          <span style={{ color: "#01754F" }}>
+                                            +000%
+                                          </span>
+                                          <span style={{ color: "#555555" }}>
+                                            (000)
+                                          </span>
                                         </div>
                                       </div>
                                     </div>
                                   </div>
                                 </div>
 
-                                <div className="half-chart">
-                                  <canvas id="halfDonutChart"></canvas>
-                                </div>
-
-                                <div className="border-0  text-end pt-3">
+                                <div
+                                  className="border-0  text-end pt-4"
+                                  style={{ cursor: "pointer" }}
+                                >
                                   <h6>View detailed insights &rarr;</h6>
                                 </div>
                               </div>
@@ -348,11 +315,86 @@ const Dashboard = () => {
                                         alt="logo"
                                       />
                                     </div>
+                                    <div className="d-flex mt-5">
+                                      <div>
+                                        <span
+                                          className="img-fluid h-icon-50  ms-3 rounded-circle navbar-circle-mobile"
+                                          style={{
+                                            backgroundColor: "#4834D4",
+                                            minWidth: "30px",
+                                            minHeight: "36px",
+                                            paddingRight: "8px",
+                                            paddingLeft: "7px",
+                                          }}
+                                        ></span>
+                                        <span
+                                          style={{ fontSize: "14px" }}
+                                          className="ms-1"
+                                        >
+                                          India
+                                        </span>
+                                      </div>
+
+                                      <div className="ms-3">
+                                        <span
+                                          className="img-fluid h-icon-50  ms-3 rounded-circle navbar-circle-mobile"
+                                          style={{
+                                            backgroundColor: "#BD5302",
+                                            minWidth: "30px",
+                                            minHeight: "36px",
+                                            paddingRight: "8px",
+                                            paddingLeft: "7px",
+                                          }}
+                                        ></span>
+                                        <span
+                                          style={{ fontSize: "14px" }}
+                                          className="ms-1"
+                                        >
+                                          USA
+                                        </span>
+                                      </div>
+                                      <div className="ms-3">
+                                        <span
+                                          className="img-fluid h-icon-50  ms-3 rounded-circle navbar-circle-mobile"
+                                          style={{
+                                            backgroundColor: "#E9C16B",
+                                            minWidth: "30px",
+                                            minHeight: "36px",
+                                            paddingRight: "8px",
+                                            paddingLeft: "7px",
+                                          }}
+                                        ></span>
+                                        <span
+                                          style={{ fontSize: "14px" }}
+                                          className="ms-1"
+                                        >
+                                          CANADA
+                                        </span>
+                                      </div>
+                                      <div className="ms-3">
+                                        <span
+                                          className="img-fluid h-icon-50  ms-3 rounded-circle navbar-circle-mobile"
+                                          style={{
+                                            backgroundColor: "#01754F",
+                                            minWidth: "30px",
+                                            minHeight: "36px",
+                                            paddingRight: "8px",
+                                            paddingLeft: "7px",
+                                          }}
+                                        ></span>
+                                        <span
+                                          style={{ fontSize: "14px" }}
+                                          className="ms-1"
+                                        >
+                                          UAE
+                                        </span>
+                                      </div>
+                                    </div>
                                   </div>
 
                                   <div className="col-lg-4">
                                     <div className=" ">
-                                      <div className="mb-4 w-100">
+                                      <div className="mb-5 w-100">
                                         <div className="d-flex align-items-center w-100">
                                           {/* Logo */}
                                           <div className="me-3 flex-shrink-0">
@@ -395,7 +437,7 @@ const Dashboard = () => {
                                           </div>
                                         </div>
                                       </div>
-                                      <div className="mb-4 w-100">
+                                      <div className="mb-5 w-100">
                                         <div className="d-flex align-items-center w-100">
                                           <div className="me-3 flex-shrink-0">
                                             <img
@@ -437,7 +479,7 @@ const Dashboard = () => {
                                           </div>
                                         </div>
                                       </div>
-                                      <div className="mb-4 w-100">
+                                      <div className="mb-5 w-100">
                                         <div className="d-flex align-items-center w-100">
                                           <div className="me-3 flex-shrink-0">
                                             <img
@@ -479,11 +521,11 @@ const Dashboard = () => {
                                           </div>
                                         </div>
                                       </div>{" "}
-                                      <div className="mb-4 w-100 ">
+                                      <div className="mb-5 w-100 ">
                                         <div className="d-flex align-items-center w-100">
                                           <div className="me-3 flex-shrink-0">
                                             <img
-                                              src="/images/united-arab-emirates-uae-flag-icon-logo-design-vector-38792380.jpg"
+                                              src="/images/38792380.jpg"
                                               className="img-fluid h-icon-50 vertx-logo-mobile"
                                               alt="logo"
                                               style={{ maxWidth: "50px" }}
@@ -522,7 +564,7 @@ const Dashboard = () => {
                                         </div>
                                       </div>
                                     </div>
-                                    <div className="text-end">
+                                    <div className="text-end ">
                                       <h6>View all Countries &rarr;</h6>
                                     </div>
                                   </div>

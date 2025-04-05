@@ -1817,7 +1817,7 @@ input:checked + .slider:before {
 }
 
 .chart-height {
-  height: 450px;
+  height: 200px;
 }
 
 .breadcrumb-item a {
@@ -2113,10 +2113,6 @@ hr {
   max-width: 1150px;
 }
 
-.chart-height {
-  height: 350px;
-}
-
 .count-stat {
   font-size: 3rem;
   font-weight: 500;
@@ -2297,6 +2293,14 @@ table {
   width: 100%; /* Makes the container full width */
   max-width: 100%; /* Ensures no horizontal overflow */
   overflow: hidden; /* Hides any extra content */
+
+  height: 270px;
+}
+
+.map-container img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .map-container iframe {

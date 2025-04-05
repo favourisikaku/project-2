@@ -61,7 +61,6 @@ const SidebarInc = () => {
                 paddingRight: "5px",
                 paddingLeft: "5px",
                 display: "none",
-                marginLeft: "-150px",
               }}
             />
           </div>
