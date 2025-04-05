@@ -2290,10 +2290,10 @@ table {
 }
 
 .map-container {
-  width: 100%; /* Makes the container full width */
-  max-width: 100%; /* Ensures no horizontal overflow */
-  overflow: hidden; /* Hides any extra content */
-
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
   height: 270px;
 }
 
@@ -2301,6 +2301,18 @@ table {
   height: 100%;
   width: 100%;
   object-fit: cover;
+}
+
+.circle-container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent !important;
+}
+
+.circle-container span {
+  margin-left: 5px; /* Adds space between the circle and text */
 }
 
 .map-container iframe {

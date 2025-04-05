@@ -196,7 +196,7 @@ const Dashboard = () => {
                                         style={{
                                           backgroundColor: "black",
                                           color: "white",
-                                          minWidth: "110px",
+                                          minWidth: "120px",
                                         }}
                                       >
                                         <option>Last 30 Days</option>
@@ -333,6 +333,22 @@ const Dashboard = () => {
                                         >
                                           India
                                         </span>
+
+                                        <div
+                                          className="circle-container"
+                                          style={{ top: "50%", left: "40%" }}
+                                        >
+                                          <span
+                                            className="img-fluid h-icon-50 rounded-circle navbar-circle-mobile"
+                                            style={{
+                                              backgroundColor: "#4834D4",
+                                              width: "10px",
+                                              height: "15px",
+                                              paddingRight: "8px",
+                                              paddingLeft: "7px",
+                                            }}
+                                          ></span>
+                                        </div>
                                       </div>
 
                                       <div className="ms-3">
@@ -352,6 +368,22 @@ const Dashboard = () => {
                                         >
                                           USA
                                         </span>
+
+                                        <div
+                                          className="circle-container"
+                                          style={{ top: "52%", left: "13%" }}
+                                        >
+                                          <span
+                                            className="img-fluid h-icon-50 rounded-circle navbar-circle-mobile"
+                                            style={{
+                                              backgroundColor: "#BD5302",
+                                              width: "10px",
+                                              height: "15px",
+                                              paddingRight: "8px",
+                                              paddingLeft: "7px",
+                                            }}
+                                          ></span>
+                                        </div>
                                       </div>
                                       <div className="ms-3">
                                         <span
@@ -370,6 +402,22 @@ const Dashboard = () => {
                                         >
                                           CANADA
                                         </span>
+
+                                        <div
+                                          className="circle-container"
+                                          style={{ top: "45%", left: "18%" }}
+                                        >
+                                          <span
+                                            className="img-fluid h-icon-50 rounded-circle navbar-circle-mobile"
+                                            style={{
+                                              backgroundColor: "#E9C16B",
+                                              width: "10px",
+                                              height: "15px",
+                                              paddingRight: "8px",
+                                              paddingLeft: "7px",
+                                            }}
+                                          ></span>
+                                        </div>
                                       </div>
                                       <div className="ms-3">
                                         <span
@@ -388,6 +436,22 @@ const Dashboard = () => {
                                         >
                                           UAE
                                         </span>
+
+                                        <div
+                                          className="circle-container"
+                                          style={{ top: "50%", left: "35%" }}
+                                        >
+                                          <span
+                                            className="img-fluid h-icon-50 rounded-circle navbar-circle-mobile"
+                                            style={{
+                                              backgroundColor: "#01754F",
+                                              width: "10px",
+                                              height: "15px",
+                                              paddingRight: "8px",
+                                              paddingLeft: "7px",
+                                            }}
+                                          ></span>
+                                        </div>
                                       </div>
                                     </div>
                                   </div>
