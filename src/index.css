@@ -2404,6 +2404,24 @@ table {
     font-weight: 700;
   }
 
+  .vertx-logo-mobile {
+    display: block !important;
+  }
+
+  .navbar-circle-mobile-image {
+    display: none !important;
+  }
+
+  .right-sidebar-logo {
+    display: block !important;
+  }
+  .logo-header-text {
+    display: none !important;
+  }
+
+  .sidebar-logo-white-image {
+    display: block !important;
+  }
   .list-check-users-3 {
     column-count: 2;
   }

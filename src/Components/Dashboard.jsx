@@ -236,6 +236,7 @@ const Dashboard = () => {
                                         style={{
                                           backgroundColor: "black",
                                           color: "white",
+                                          minWidth: "110px",
                                         }}
                                       >
                                         <option>Last 30 Days</option>
@@ -315,9 +316,7 @@ const Dashboard = () => {
                                 </div>
 
                                 <div className="border-0  text-end pt-3">
-                                  <button className="btn btn-outline-light btn-size-2 flex-shrink-0">
-                                    view detailed insights &rarr;
-                                  </button>
+                                  <h6>View detailed insights &rarr;</h6>
                                 </div>
                               </div>
                             </div>
@@ -332,7 +331,7 @@ const Dashboard = () => {
                               <div className="card-body">
                                 <div className="d-flex justify-content-between align-items-center border-0 flex-wrap overflow-auto px-4">
                                   <div className="me-lg-0 me-4 mb-lg-0 mb-3">
-                                    <h4 className="text-medium text-dark mb-0">
+                                    <h4 className="text-medium  mb-0">
                                       Demographics
                                     </h4>
                                   </div>
@@ -343,141 +342,188 @@ const Dashboard = () => {
                                 <div className="row">
                                   <div className="col-lg-8">
                                     <div className="map-container">
-                                      <iframe
-                                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15851.4001900965!2d3.3333472499999997!3d6.66549745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sng!4v1733566622119!5m2!1sen!2sng"
-                                        width="600"
-                                        height="450"
-                                        style={{ border: "0" }}
-                                        allowFullScreen=""
-                                        loading="lazy"
-                                        referrerPolicy="no-referrer-when-downgrade"
-                                      ></iframe>
+                                      <img
+                                        src="/images/world-new.svg"
+                                        className="img-fluid  "
+                                        alt="logo"
+                                      />
                                     </div>
                                   </div>
 
                                   <div className="col-lg-4">
-                                    <div>
-                                      <div className="mb-4">
-                                        <div
-                                          className="d-flex justify-content-between align-items-center"
-                                          style={{ marginBottom: "-2px" }}
-                                        >
-                                          <h5 className="text-medium text-black mb-1">
-                                            india
-                                          </h5>
-                                          <p className="text-medium text-black mb-1">
-                                            40%
-                                          </p>
-                                        </div>
-                                        <div
-                                          className="progress mt-2"
-                                          style={{ height: "10px" }}
-                                        >
-                                          <div
-                                            className="progress-bar "
-                                            role="progressbar"
-                                            style={{
-                                              width: "30%",
-                                              backgroundColor: "purple",
-                                            }}
-                                            aria-valuenow="65"
-                                            aria-valuemin="0"
-                                            aria-valuemax="100"
-                                          ></div>
-                                        </div>
-                                      </div>
+                                    <div className=" ">
+                                      <div className="mb-4 w-100">
+                                        <div className="d-flex align-items-center w-100">
+                                          {/* Logo */}
+                                          <div className="me-3 flex-shrink-0">
+                                            <img
+                                              src="/images/indian-flag-logo-png_seeklogo-71256.png"
+                                              className="img-fluid h-icon-50 vertx-logo-mobile"
+                                              alt="logo"
+                                              style={{ maxWidth: "50px" }}
+                                            />
+                                          </div>
 
-                                      <div className="mb-4">
-                                        <div
-                                          className="d-flex justify-content-between align-items-center"
-                                          style={{ marginBottom: "-2px" }}
-                                        >
-                                          <h5 className="text-medium text-black mb-1">
-                                            USA
-                                          </h5>
-                                          <p className="text-medium text-black mb-1">
-                                            26%
-                                          </p>
-                                        </div>
-                                        <div
-                                          className="progress mt-2"
-                                          style={{ height: "10px" }}
-                                        >
-                                          <div
-                                            className="progress-bar "
-                                            role="progressbar"
-                                            style={{
-                                              width: "20%",
-                                              backgroundColor: "orange",
-                                            }}
-                                            aria-valuenow="65"
-                                            aria-valuemin="0"
-                                            aria-valuemax="100"
-                                          ></div>
-                                        </div>
-                                      </div>
-                                      <div className="mb-4">
-                                        <div
-                                          className="d-flex justify-content-between align-items-center"
-                                          style={{ marginBottom: "-2px" }}
-                                        >
-                                          <h5 className="text-medium text-black mb-1">
-                                            Canada
-                                          </h5>
-                                          <p className="text-medium text-black mb-1">
-                                            10%
-                                          </p>
-                                        </div>
-                                        <div
-                                          className="progress mt-2"
-                                          style={{ height: "10px" }}
-                                        >
-                                          <div
-                                            className="progress-bar "
-                                            role="progressbar"
-                                            style={{
-                                              width: "10%",
-                                              backgroundColor: "yellow",
-                                            }}
-                                            aria-valuenow="65"
-                                            aria-valuemin="0"
-                                            aria-valuemax="100"
-                                          ></div>
+                                          <div className="flex-grow-1 w-100">
+                                            <div className="d-flex justify-content-between align-items-center w-100 mb-1">
+                                              <h5 className="text-medium mb-1">
+                                                India
+                                              </h5>
+                                              <p className="text-medium mb-1">
+                                                40%
+                                              </p>
+                                            </div>
+                                            <div
+                                              className="progress"
+                                              style={{
+                                                height: "10px",
+                                                width: "100%",
+                                              }}
+                                            >
+                                              <div
+                                                className="progress-bar"
+                                                role="progressbar"
+                                                style={{
+                                                  width: "40%",
+                                                  backgroundColor: "purple",
+                                                }}
+                                                aria-valuenow="40"
+                                                aria-valuemin="0"
+                                                aria-valuemax="100"
+                                              ></div>
+                                            </div>
+                                          </div>
                                         </div>
                                       </div>
+                                      <div className="mb-4 w-100">
+                                        <div className="d-flex align-items-center w-100">
+                                          <div className="me-3 flex-shrink-0">
+                                            <img
+                                              src="/images/usa-flag-logo-png_seeklogo-285715.png"
+                                              className="img-fluid h-icon-50 vertx-logo-mobile"
+                                              alt="logo"
+                                              style={{ maxWidth: "50px" }}
+                                            />
+                                          </div>
 
-                                      <div className="mb-4">
-                                        <div
-                                          className="d-flex justify-content-between align-items-center"
-                                          style={{ marginBottom: "-2px" }}
-                                        >
-                                          <h5 className="text-medium text-black mb-1">
-                                            UAE
-                                          </h5>
-                                          <p className="text-medium text-black mb-1">
-                                            3%
-                                          </p>
+                                          <div className="flex-grow-1 w-100">
+                                            <div className="d-flex justify-content-between align-items-center w-100 mb-1">
+                                              <h5 className="text-medium mb-1">
+                                                USA
+                                              </h5>
+                                              <p className="text-medium mb-1">
+                                                25%
+                                              </p>
+                                            </div>
+                                            <div
+                                              className="progress"
+                                              style={{
+                                                height: "10px",
+                                                width: "100%",
+                                              }}
+                                            >
+                                              <div
+                                                className="progress-bar"
+                                                role="progressbar"
+                                                style={{
+                                                  width: "20%",
+                                                  backgroundColor: "orange",
+                                                }}
+                                                aria-valuenow="40"
+                                                aria-valuemin="0"
+                                                aria-valuemax="100"
+                                              ></div>
+                                            </div>
+                                          </div>
                                         </div>
-                                        <div
-                                          className="progress mt-2"
-                                          style={{ height: "10px" }}
-                                        >
-                                          <div
-                                            className="progress-bar "
-                                            role="progressbar"
-                                            style={{
-                                              width: "5%",
-                                              backgroundColor: "green",
-                                            }}
-                                            aria-valuenow="65"
-                                            aria-valuemin="0"
-                                            aria-valuemax="100"
-                                          ></div>
+                                      </div>
+                                      <div className="mb-4 w-100">
+                                        <div className="d-flex align-items-center w-100">
+                                          <div className="me-3 flex-shrink-0">
+                                            <img
+                                              src="/images/images.png"
+                                              className="img-fluid h-icon-50 vertx-logo-mobile"
+                                              alt="logo"
+                                              style={{ maxWidth: "50px" }}
+                                            />
+                                          </div>
+
+                                          <div className="flex-grow-1 w-100">
+                                            <div className="d-flex justify-content-between align-items-center w-100 mb-1">
+                                              <h5 className="text-medium mb-1">
+                                                Canada
+                                              </h5>
+                                              <p className="text-medium mb-1">
+                                                10%
+                                              </p>
+                                            </div>
+                                            <div
+                                              className="progress"
+                                              style={{
+                                                height: "10px",
+                                                width: "100%",
+                                              }}
+                                            >
+                                              <div
+                                                className="progress-bar"
+                                                role="progressbar"
+                                                style={{
+                                                  width: "10%",
+                                                  backgroundColor: "yellow",
+                                                }}
+                                                aria-valuenow="40"
+                                                aria-valuemin="0"
+                                                aria-valuemax="100"
+                                              ></div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>{" "}
+                                      <div className="mb-4 w-100 ">
+                                        <div className="d-flex align-items-center w-100">
+                                          <div className="me-3 flex-shrink-0">
+                                            <img
+                                              src="/images/united-arab-emirates-uae-flag-icon-logo-design-vector-38792380.jpg"
+                                              className="img-fluid h-icon-50 vertx-logo-mobile"
+                                              alt="logo"
+                                              style={{ maxWidth: "50px" }}
+                                            />
+                                          </div>
+
+                                          <div className="flex-grow-1 w-100">
+                                            <div className="d-flex justify-content-between align-items-center w-100 mb-1">
+                                              <h5 className="text-medium mb-1">
+                                                UAE
+                                              </h5>
+                                              <p className="text-medium mb-1">
+                                                7%
+                                              </p>
+                                            </div>
+                                            <div
+                                              className="progress"
+                                              style={{
+                                                height: "10px",
+                                                width: "100%",
+                                              }}
+                                            >
+                                              <div
+                                                className="progress-bar"
+                                                role="progressbar"
+                                                style={{
+                                                  width: "7%",
+                                                  backgroundColor: "green",
+                                                }}
+                                                aria-valuenow="40"
+                                                aria-valuemin="0"
+                                                aria-valuemax="100"
+                                              ></div>
+                                            </div>
+                                          </div>
                                         </div>
                                       </div>
                                     </div>
-                                    <div>
-                                      <h6>View Countries</h6>
+                                    <div className="text-end">
+                                      <h6>View all Countries &rarr;</h6>
                                     </div>
                                   </div>
                                 </div>
