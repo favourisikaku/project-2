@@ -310,10 +310,10 @@ const Dashboard = () => {
                             <div className="card h-100 border-dark">
                               <div className="card-body">
                                 <div className="d-flex justify-content-between align-items-center border-0 flex-nowrap overflow-auto py-3 pb-4  ">
-                                  <div className="me-lg-0 me-4">
+                                  <div className="me-lg-0 me-4 insights-header-mobile">
                                     <div className="mb-4">
                                       <h2
-                                        className="text-medium  mb-0 me-2"
+                                        className="text-medium  mb-3 me-2"
                                         style={{ fontSize: "24px" }}
                                       >
                                         Insights
@@ -441,7 +441,7 @@ const Dashboard = () => {
                                           <span
                                             className="img-fluid h-icon-50 rounded-circle navbar-circle-mobile"
                                             style={{
-                                              backgroundColor: "#4834D4",
+                                              backgroundColor: "purple",
                                               width: "10px",
                                               height: "15px",
                                               paddingRight: "8px",

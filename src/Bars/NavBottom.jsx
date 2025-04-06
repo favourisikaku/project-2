@@ -26,7 +26,7 @@ const NavBottom = () => {
           </li>
           <li>
             <Link
-              to="/"
+              to="/analytics"
               className="text-decoration-none bottom-opacity text-white"
             >
               <div className="text-center d-flex align-items-center flex-column">

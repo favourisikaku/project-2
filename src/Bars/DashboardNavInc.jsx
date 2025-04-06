@@ -1,8 +1,10 @@
 import React, { useContext, useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AppContext } from "../Context/AppContext";
 
 const DashboardNavInc = ({ SideBarVisibility }) => {
+  const location = useLocation();
+  const { pathname } = location;
   return (
     <>
       <div className=" d-lg-block d-none py-3 border-bottom  border-dark">
@@ -14,7 +16,11 @@ const DashboardNavInc = ({ SideBarVisibility }) => {
             ></i> */}
 
             <div>
-              <h5 className="mb-1 ">Analytics</h5>
+              {pathname === "/" ? (
+                <h5 className="mb-1 ">Profile</h5>
+              ) : (
+                <h5 className="mb-1 ">Analytics</h5>
+              )}
               {/* <p className="text-gray-1 ft-sm mb-0">Welcome back, Favour!</p> */}
             </div>
           </div>

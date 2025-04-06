@@ -102,7 +102,7 @@ const SidebarInc = () => {
           <div className="offcanvas-body flex-column custom-offcanvas-h">
             <ul className="navbar-nav flex-column sidebar-list m-4 pt-1">
               <li className="nav-item">
-                <Link className="nav-link d-flex align-items-center">
+                <Link to="/" className="nav-link d-flex align-items-center">
                   <img
                     src="/images/Rectangle.svg"
                     className="img-fluid me-2 rounded-circle"
@@ -118,7 +118,10 @@ const SidebarInc = () => {
               </li>
 
               <li className="nav-item">
-                <Link className="nav-link d-flex align-items-center">
+                <Link
+                  to="/analytics"
+                  className="nav-link d-flex align-items-center"
+                >
                   <img
                     src="/images/Rectangle.svg"
                     className="img-fluid me-2 rounded-circle"

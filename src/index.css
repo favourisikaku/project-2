@@ -2455,6 +2455,8 @@ table {
 
   .insights-body {
     display: flex;
+    width: 100% !important;
+    justify-content: space-between !important;
   }
   .navbar-circle-mobile-text {
     display: none !important;
@@ -2482,9 +2484,39 @@ table {
     top: 30% !important;
     left: 53% !important;
   }
+  .insights-header-mobile {
+    width: 100% !important;
+  }
 
   .dashboard-more {
     display: none !important;
+  }
+
+  .overview-section-1-header {
+    flex-direction: column !important;
+    padding: 0 !important;
+  }
+
+  .overview-section-1-header .d-flex {
+    margin-top: 10px;
+  }
+  .entrepreneur-header {
+    display: flex;
+    justify-content: space-between !important;
+  }
+  .entrepreneur-header span {
+    height: 23px;
+    margin-top: 3px;
+  }
+  .entrepreneur-header .logos {
+    padding-top: 0 !important;
+  }
+  .section-2-header {
+    padding: 0 !important;
+  }
+
+  .section-3-header {
+    padding: 0 !important;
   }
 
   .vertx-logo-mobile {
